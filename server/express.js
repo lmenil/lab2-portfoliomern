@@ -6,11 +6,13 @@ import cors from 'cors'
 import helmet from 'helmet'
 import Template from './../template.js'
 import userRoutes from './routes/user.routes.js'
+import contactRoutes from './routes/contact.routes.js'
     const app = express()
    /*... configure express ... */  
    app.use(express.json());
    app.use(express.urlencoded({ extended: true }));
    app.use('/', userRoutes)
+   app.use('/', contactRoutes)
    //app.use('/', authRoutes)
    app.use(bodyParser.json())
    app.use(bodyParser.urlencoded({ extended: true }))
