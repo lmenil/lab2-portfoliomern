@@ -9,7 +9,7 @@ export const getAllUsers = async (req, res) => {
     }
 };
 
-// Get user by ID
+
 export const getUserById = async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
@@ -20,7 +20,7 @@ export const getUserById = async (req, res) => {
     }
 };
 
-// Add new user
+
 export const addUser = async (req, res) => {
     const user = new User(req.body);
     try {
@@ -31,7 +31,7 @@ export const addUser = async (req, res) => {
     }
 };
 
-// Update user by ID
+
 export const updateUserById = async (req, res) => {
     try {
         const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -42,7 +42,7 @@ export const updateUserById = async (req, res) => {
     }
 };
 
-// Remove user by ID
+
 export const deleteUserById = async (req, res) => {
     try {
         const deletedUser = await User.findByIdAndDelete(req.params.id);
@@ -53,7 +53,7 @@ export const deleteUserById = async (req, res) => {
     }
 };
 
-// Remove all users
+
 export const deleteAllUsers = async (req, res) => {
     try {
         await User.deleteMany();
