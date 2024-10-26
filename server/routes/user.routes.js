@@ -1,17 +1,23 @@
-import express from 'express'
-import userCtrl from '../controllers/user.controller.js'
-import authCtrl from '../controllers/auth.controller.js'
-const router = express.Router()
-router.route('/api/users').post(userCtrl.create)
-router.route('/api/users').get(userCtrl.list)
-router.route('/api/users/:userId')
-.get(authCtrl.requireSignin, userCtrl.read)
-.put(authCtrl.requireSignin, authCtrl.hasAuthorization, 
-userCtrl.update)
-.delete(authCtrl.requireSignin, authCtrl.hasAuthorization, 
-userCtrl.remove)
-router.param('userId', userCtrl.userByID)
-router.route('/api/users/:userId').get(userCtrl.read)
-router.route('/api/users/:userId').put(userCtrl.update)
-router.route('/api/users/:userId').delete(userCtrl.remove)
+import {Router} from 'express'
+import {getAllUsers,getUserById,addUser,updateUserById,deleteUserById,deleteAllUsers} from '../controllers/user.controller.js'
+//import { create } from 'lodash';
+const router = Router()
+
+router.get('/api/users', getAllUsers);
+
+// Get user by ID
+router.get('/api/users/:id', getUserById);
+
+// Add new user
+router.post('/api/users/', addUser);
+
+// Update user by ID
+router.put('/api/users/:id', updateUserById);
+
+// Remove user by ID
+router.delete('/api/users/:id', deleteUserById);
+
+// Remove all users
+router.delete('/api/users', deleteAllUsers);
+
 export default router
