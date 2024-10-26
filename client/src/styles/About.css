@@ -1,0 +1,71 @@
+/* About.css */
+/* File: About.css
+   Student Name: Lorenzo Jr Menil
+   Student ID: 301341544
+   Date: 2024-09-21
+*/
+
+/* About style */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+} 
+
+.about-text {
+  text-align:justify;
+}
+
+/* Download Resume style  */
+.resume-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+  
+.resume-link:hover {
+  background-color: #555;
+}
+
+/* About container style  */
+.container {
+  display: flex;
+  background-color: #fff;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+
+.text-section {
+    flex: 1;
+    padding: 40px;
+}
+
+.text-section h1 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Image style  */
+.image-section {
+  flex: 1;
+  overflow: hidden;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}

@@ -1,0 +1,43 @@
+/* Services.css */
+/* File: Services.css
+   Student Name: Lorenzo Jr Menil
+   Student ID: 301341544
+   Date: 2024-09-21
+*/
+
+.services {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .service-card {
+    background-color: #f9f9f9;
+    color: black;
+    width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .service-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    color: #555;
+  }
+  
